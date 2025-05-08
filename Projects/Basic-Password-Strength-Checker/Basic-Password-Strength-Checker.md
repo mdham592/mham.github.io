@@ -4,7 +4,7 @@
 
 [Source Code with UI](./UI-Password-Strength-Checker.py).
 
-Resources used:
+### Resources used:
 
 https://docs.python.org/3/library/tk.html
 
