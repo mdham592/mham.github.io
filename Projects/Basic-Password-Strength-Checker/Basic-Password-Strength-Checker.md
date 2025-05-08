@@ -11,38 +11,21 @@ https://docs.python.org/3/library/tk.html
 https://gist.github.com/richardkundl/b68afdcf68240dcff50a
 
 ## What did I learn?
- Programming Concepts
-String manipulation: Checking length, presence of uppercase/lowercase, digits, symbols.
+Creating a basic password strength tester reinforced many foundational programming and security concepts.
 
-Control flow: Using if/else statements or switch to evaluate password criteria.
+From a coding perspective, I reviewed how to manipulate strings to check things like length, the use of uppercase/lowercase letters, digits, and special characters. It also gave me hands-on practice with control flow (if/else statements).I broke the logic into functions to keep things clean and readable, and used basic data structures like arrays and sets where needed.
 
-Regex (Regular Expressions): If used, this introduces pattern matching — a powerful text-processing tool.
+On the security side, I reviewed what makes a password strong, like the length, character variety, and avoiding common passwords. This also helped me realize the limitations of client-side password checkers; they can give guidance, but they don't guarantee security.
 
-Functions: Breaking logic into reusable parts.
+Building the password test was a solid mini-project. It touched on real-world relevance since password strength is something every app deals with. It gave me a refresher in Python and helped me learn the basics of the Tkinter package. Creating a basic password strength tester was a fun project that covered  skills across programming, security, and even user experience.
 
-Data structures: You might use arrays, dictionaries, or sets to track characters or score criteria.
 
-🔐 Security Awareness
-What makes a password weak or strong: Minimum length, use of symbols, avoiding dictionary words.
+## Screenshots of the program in action
+[Intraction_Screenshot.PNG](./Intraction_Screenshot.PNG)
 
-Common password weaknesses: Repeated characters, predictable patterns, personal info.
+[UI_Screenshot.PNG](./UI_Screenshot.PNG)
 
-Limitations of client-side checking: Understanding that strength meters don’t guarantee safety.
-
-💡 UX/UI Design
-Feedback mechanisms: Showing users how to improve their password.
-
-Real-time interactivity: Dynamic scoring or coloring based on user input.
-
-Balancing usability and security: Helping users without frustrating them.
-
-🔧 Practical Application
-Real-world relevance: Nearly every app or site needs secure authentication.
-
-Coding confidence: It’s a small but complete project with input, logic, and output.
-
-Security mindset: It introduces thinking like an attacker (e.g., guessing passwords) and a defender.
-
+## Brief Code Walk Through
 
 
 > This is a blockquote following a header.
