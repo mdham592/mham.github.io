@@ -1,11 +1,13 @@
 
 # Password Strength Checker
-[Source Code with no UI](./Password-Strength-Checker.py).
+[Source Code without GUI](./Password-Strength-Checker.py).
 
 [Source Code with UI](./UI-Password-Strength-Checker.py).
 
 Resources used:
+
 https://docs.python.org/3/library/tk.html
+
 https://gist.github.com/richardkundl/b68afdcf68240dcff50a
 
 ## What did I learn?
