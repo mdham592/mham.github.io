@@ -24,6 +24,21 @@ Building the password test was a solid mini-project. It touched on real-world re
 ![Intraction_Screenshot.PNG](./Intraction_Screenshot.png) ![UI_Screenshot.PNG](./UI_Screenshot.PNG)
 
 
+![Exposed_password_check.PNG](./Exposed_password_check.PNG)
+
+
+![identifies_chars_used.PNG](./identifies_chars_used.PNG)
+
+
+![Range_calc.PNG](./Range_calc.PNG)
+
+
+![main.PNG](./main.PNG)
+
+
+![UI.PNG](./UI.PNG)
+
+
 
 
 
