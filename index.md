@@ -23,3 +23,5 @@
 *   [Disk Forensics](./Disk-Reports/reports.md)
 
 
+# Home Lab
+*   [Home Lab Documentation](./Home-Lab/Lab-Documentation.md).
