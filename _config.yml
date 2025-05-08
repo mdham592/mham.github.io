@@ -1,4 +1,6 @@
-title: Mason Ham's Portfolio of Cybersecurity Projects <br>and Write-ups.
+title: Mason Ham's Portfolio of Cybersecurity Projects and Write-ups.
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-hacker
+extra_css:
+  - 'main.css'
