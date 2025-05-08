@@ -24,25 +24,28 @@ Building the password test was a solid mini-project. It touched on real-world re
 ![Intraction_Screenshot.PNG](./Intraction_Screenshot.png) ![UI_Screenshot.PNG](./UI_Screenshot.PNG)
 
 
+## Brief Code Walk Through
+
+This is Blah Blah Blah!
 ![Exposed_password_check.PNG](./Exposed_password_check.PNG)
 
-
+This is Blah Blah Blah!
 ![identifies_chars_used.PNG](./identifies_chars_used.PNG)
 
-
+This is Blah Blah Blah!
 ![Range_calc.PNG](./Range_calc.PNG)
 
-
+This is Blah Blah Blah!
 ![main.PNG](./main.PNG)
 
-
+This is Blah Blah Blah!
 ![UI.PNG](./UI.PNG)
 
 
 
 
 
-## Brief Code Walk Through
+
 
 
 > This is a blockquote following a header.
