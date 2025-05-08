@@ -1,22 +1,46 @@
 
----
-layout: default
----
-
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
-
-[Source Code](./Password-Strength-Checker.py).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
 # Password Strength Checker
-A tool that evaluates password security based on complexity and common patterns.
+[Source Code with no UI](./Password-Strength-Checker.py).
+[Source Code with UI](./UI-Password-Strength-Checker.py).
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Resources used:
+https://docs.python.org/3/library/tk.html
+https://gist.github.com/richardkundl/b68afdcf68240dcff50a
 
-## Header 2
+## What did I learn?
+ Programming Concepts
+String manipulation: Checking length, presence of uppercase/lowercase, digits, symbols.
+
+Control flow: Using if/else statements or switch to evaluate password criteria.
+
+Regex (Regular Expressions): If used, this introduces pattern matching — a powerful text-processing tool.
+
+Functions: Breaking logic into reusable parts.
+
+Data structures: You might use arrays, dictionaries, or sets to track characters or score criteria.
+
+🔐 Security Awareness
+What makes a password weak or strong: Minimum length, use of symbols, avoiding dictionary words.
+
+Common password weaknesses: Repeated characters, predictable patterns, personal info.
+
+Limitations of client-side checking: Understanding that strength meters don’t guarantee safety.
+
+💡 UX/UI Design
+Feedback mechanisms: Showing users how to improve their password.
+
+Real-time interactivity: Dynamic scoring or coloring based on user input.
+
+Balancing usability and security: Helping users without frustrating them.
+
+🔧 Practical Application
+Real-world relevance: Nearly every app or site needs secure authentication.
+
+Coding confidence: It’s a small but complete project with input, logic, and output.
+
+Security mindset: It introduces thinking like an attacker (e.g., guessing passwords) and a defender.
+
+
 
 > This is a blockquote following a header.
 >
