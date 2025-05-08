@@ -9,7 +9,7 @@ import string
 lc = 26
 uc = 26
 num = 10
-Sym = 10
+sym = 10
 oSym = 23
 range = 0
 entropy = 0
@@ -56,7 +56,7 @@ def cal_range(resultsArray, ):
         "lowercase": lc,
         "uppercase": uc,
         "digits": num,
-        "shift_0_9_symbols": Sym,
+        "shift_0_9_bols": sym,
         "other_symbols": oSym
     }
     range = sum(weights[k] for k, v in resultsArray.items() if v)
