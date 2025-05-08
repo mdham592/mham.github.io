@@ -21,9 +21,9 @@ Building the password test was a solid mini-project. It touched on real-world re
 
 
 ## Screenshots of the program in action
-[Intraction_Screenshot.PNG](./Intraction_Screenshot.PNG)
+![Intraction_Screenshot.PNG](./Intraction_Screenshot.PNG)
 
-[UI_Screenshot.PNG](./UI_Screenshot.PNG)
+![UI_Screenshot.PNG](./UI_Screenshot.PNG)
 
 ## Brief Code Walk Through
 
