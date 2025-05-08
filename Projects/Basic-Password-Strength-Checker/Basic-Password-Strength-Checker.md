@@ -1,6 +1,7 @@
 
 # Password Strength Checker
 [Source Code with no UI](./Password-Strength-Checker.py).
+
 [Source Code with UI](./UI-Password-Strength-Checker.py).
 
 Resources used:
