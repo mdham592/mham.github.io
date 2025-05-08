@@ -5,7 +5,7 @@
 import math
 import string
 
-# If you use Lowercase Letters, Uppercase Letters, Numbers, Shift + [0-9] Symbols, and Other Symbols. If all character types are uses the range can reach 95.
+# If you use Lowercase, Uppercase, Numbers, Shift + [0-9] Symbols, and Other Symbols. If all character types are used, the range can reach 95.
 lc = 26
 uc = 26
 num = 10
@@ -15,7 +15,7 @@ range = 0
 entropy = 0
 
 
-# Method to check password against know exposed password lists
+# Method to check password against known exposed password lists
 def password_exposed_check(password):
     exposed = False
     with open(r'D:\projects\10k-common-passwords.txt', 'r') as file:
@@ -50,7 +50,7 @@ def categorize_characters(password):
     return result
 
 
-# Method used to identify the ranges total.
+# Method used to identify the range's total.
 def cal_range(resultsArray, ):
     weights = {
         "lowercase": lc,
@@ -63,7 +63,7 @@ def cal_range(resultsArray, ):
     return range
 
 
-# Accepts user input and calculates entropy and run password_exposed_check.
+# Accepts user input and calculates entropy, and runs password_exposed_check.
 while True:
     password = input("Please enter your password:")
     categorized = categorize_characters(password)
