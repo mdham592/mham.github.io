@@ -3,7 +3,7 @@
 
 # Projects
 
-*   [Password Strength Checker](./Projects/Password-Strength-Checker/Password-Strength-Checker.md).
+*   [Password Strength Checker](./Projects/Basic-Password-Strength-Checker/Basic-Password-Strength-Checker.md).
 *   [Basic Python Port Scanner](./Projects/Basic-Python-Port-Scanner/Basic-Python-Port-Scanner.md).
 *   [Basic Hash Cracker](./Projects/Basic-Hash-Cracker/Basic-Hash-Cracker.md).
 *   [Firewall Rules Simulation](./Projects/Firewall-Rules-Simulation/Firewall-Rules-Simulation.md).
