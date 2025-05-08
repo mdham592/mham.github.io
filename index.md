@@ -1,11 +1,9 @@
 
----
-layout: default
----
+
 
 # Projects
 
-*   [Password Strength Checker](./Projects/Password-Strenth-Checker.md).
+*   [Password Strength Checker](./Projects/Password-Strength-Checker.md).
 *   [Basic Python Port Scanner](./Projects/Basic-Python-Port-Scanner.md).
 *   [Basic Hash Cracker](./Projects/Basic-Hash-Cracker.md).
 *   [Firewall Rules Simulation](./Projects/Firewall-Rules-Simulation.md).
@@ -22,6 +20,6 @@ layout: default
 # Write Ups
 
 *   [Malware Analysis](./Malware-Reports/reports.md).
-*   <!--[Disk Forensics](./Disk-Reports/reports.md)-->
+*   [Disk Forensics](./Disk-Reports/reports.md)
 
 
