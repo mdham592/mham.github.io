@@ -21,11 +21,13 @@ This project further reinforced the importance of complex/unique passwords. It s
 ![Intraction_Screenshot.PNG](./Hashing_passwordlists.PNG) ![UI_Screenshot.PNG](./cracker_inaction.PNG)
 
 
+
 ## Brief Code Walk Through
 
 The first step before I began the cracker was making a word list. I used the top 10,000 passwords (which can be swapped for rockyou.txt for wider coverage). The program would then open a new text file for each hashing algorithm I used, writing the password and the corresponding hash separated by ":" for future splitting.
 
 ![HashMaker_sc.PNG](./hashMaker_sc.PNG)
+
 
 
 
@@ -35,9 +37,11 @@ The program would start by accepting the user's input. The length of the hash de
 
 
 
+
 Using the algorithm found in the previous step, we would access the respective updated password text file, comparing the user's input hash to the hashes in the file. If there was a match, then the program would tell the user and print out the corresponding password.
 
 ![Check_dictionary.PNG](./Check_dictionary.PNG)
+
 
 
 
@@ -47,9 +51,11 @@ This part of the program would then prompt users to confirm whether they want to
 
 
 
+
 The brute force function created a character set to run through using itertools. For usability, I set a maximum password length to 8.
 
-![bruteforce_sc](./bruteforce_sc)
+![bruteforce_sc](./bruteforce_sc.PNG)
+
 
 
 
