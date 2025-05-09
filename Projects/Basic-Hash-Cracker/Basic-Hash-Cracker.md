@@ -9,6 +9,7 @@
 
 https://gist.github.com/richardkundl/b68afdcf68240dcff50a
 https://docs.python.org/3/library/hashlib.html
+
 https://docs.python.org/3/library/itertools.html
 
 ## What did I learn?
@@ -17,7 +18,7 @@ This project further reinforced the importance of complex/unique passwords. It s
 
 
 ## Screenshots of the program in action
-![Intraction_Screenshot.PNG](./Hashing_passwordlists.png) ![UI_Screenshot.PNG](./cracker_inaction.PNG)
+![Intraction_Screenshot.PNG](./Hashing_passwordlists.PNG) ![UI_Screenshot.PNG](./cracker_inaction.PNG)
 
 
 ## Brief Code Walk Through
