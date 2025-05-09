@@ -1,5 +1,5 @@
 
-# Password Strength Checker
+# Basic Password Strength Checker
 [Source Code without GUI](./Password-Strength-Checker.py).
 
 [Source Code with UI](./UI-Password-Strength-Checker.py).
@@ -26,139 +26,41 @@ Building the password test was a solid mini-project. It touched on real-world re
 
 ## Brief Code Walk Through
 
-This is Blah Blah Blah!
+The first part of the program compares the password to the top 10,000 passwords used. A bigger password list can easily expand this.
 
 ![Exposed_password_check.PNG](./Exposed_password_check.PNG)
 
 
-This is Blah Blah Blah!
+This part of this program identifies the types of chars used so we can calculate the range in the next step.
 
 ![identifies_chars_used.PNG](./identifies_chars_used.PNG)
 
 
-This is Blah Blah Blah!
+Now that we know what types of chars are used, we can add up the total value of the range.
 
 ![Range_calc.PNG](./Range_calc.PNG)
 
 
-This is Blah Blah Blah!
+This runs the program forever, accepting user input and printing out the entropy results.
 
 ![main.PNG](./main.PNG)
 
 
-This is Blah Blah Blah!
+This is a part of the GUI program, specifically using the Tkinter package.
 
 ![UI.PNG](./UI.PNG)
 
 
 
+## Future Improvements
+
+If I wanted to improve this project in the future, the first thing that I would do is add regex/pattern matching when reviewing the user's password. For example, we know password123 is going to be considered weak, but if we had regex for "password," we could let the user know that their password is still super weak. We could also search for passwords that are just repetitions, such as "121212121212."
 
 
 
 
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
-### Definition lists can be used with HTML syntax.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
 ```
