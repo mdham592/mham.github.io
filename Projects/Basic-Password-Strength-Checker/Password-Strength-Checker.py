@@ -10,7 +10,7 @@ lc = 26
 uc = 26
 num = 10
 sym = 10
-oSym = 23
+oSym = 13
 range = 0
 entropy = 0
 
