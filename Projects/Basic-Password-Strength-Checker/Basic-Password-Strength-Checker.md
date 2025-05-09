@@ -17,7 +17,7 @@ From a coding perspective, I reviewed how to manipulate strings to check things 
 
 On the security side, I reviewed what makes a password strong, like the length, character variety, and avoiding common passwords. This also helped me realize the limitations of client-side password checkers; they can give guidance, but they don't guarantee security.
 
-Building the password test was a solid mini-project. It touched on real-world relevance since password strength is something every app deals with. It gave me a refresher in Python and helped me learn the basics of the Tkinter package. Creating a basic password strength tester was a fun project that covered  skills across programming, security, and even user experience.
+Building the password test was a solid mini-project. It touched on real-world relevance since password strength is something every app deals with. It gave me a refresher in Python and helped me learn the basics of the Tkinter package. Creating a basic password strength tester was a fun project covering skills across programming, security, and even user experience.
 
 
 ## Screenshots of the program in action
@@ -31,9 +31,11 @@ The first part of the program compares the password to the top 10,000 passwords 
 ![Exposed_password_check.PNG](./Exposed_password_check.PNG)
 
 
+
 This part of this program identifies the types of chars used so we can calculate the range in the next step.
 
 ![identifies_chars_used.PNG](./identifies_chars_used.PNG)
+
 
 
 Now that we know what types of chars are used, we can add up the total value of the range.
@@ -41,9 +43,11 @@ Now that we know what types of chars are used, we can add up the total value of 
 ![Range_calc.PNG](./Range_calc.PNG)
 
 
+
 This runs the program forever, accepting user input and printing out the entropy results.
 
 ![main.PNG](./main.PNG)
+
 
 
 This is a part of the GUI program, specifically using the Tkinter package.
