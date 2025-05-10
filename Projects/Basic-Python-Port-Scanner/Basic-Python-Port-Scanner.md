@@ -1,5 +1,5 @@
 
-# Basic Password Strength Checker
+# Basic Python Port Scanner
 [Source Code](./Port_Scanner.py).
 
 
