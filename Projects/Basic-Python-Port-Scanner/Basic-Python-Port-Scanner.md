@@ -6,7 +6,8 @@
 ### Resources used:
 
 https://docs.python.org/3/library/socket.html
-https://docs.python.org/3/library/concurrent.futures.htm
+https://docs.python.org/3/library/concurrent.futures.html
+
 https://docs.python.org/3/library/threading.html
 
 ## What did I learn?
