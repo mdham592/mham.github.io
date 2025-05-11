@@ -11,62 +11,39 @@
 
 ### Resources used:
 
-https://gist.github.com/richardkundl/b68afdcf68240dcff50a
-https://docs.python.org/3/library/hashlib.html
+https://linux.die.net/man/8/iptables
 
-https://docs.python.org/3/library/itertools.html
+https://docs.xfce.org/xfce/getting-started
 
-## What did I learn?
-This project further reinforced the importance of complex/unique passwords. It showed me why rainbow table attacks are a common way passwords can be leaked. It also exposed me to two new Python libraries: hashlib and itertools.
+https://github.com/neutrinolabs/xrdp
 
+## Why this project was important:
 
-
-## Screenshots of the program in action
-![Intraction_Screenshot.PNG](./Hashing_passwordlists.PNG) ![UI_Screenshot.PNG](./cracker_inaction.PNG)
-
-
-
-## Brief Code Walk Through
-
-The first step before I began the cracker was making a word list. I used the top 10,000 passwords (which can be swapped for rockyou.txt for wider coverage). The program would then open a new text file for each hashing algorithm I used, writing the password and the corresponding hash separated by ":" for future splitting.
-
-![HashMaker_sc.PNG](./hashMaker_sc.PNG)
+In the past, I have configured and troubleshooted firewall rules; however, using iptables allowed me to set up a firewall from scratch using the CLI. This project gave me a strong reminder about the importance of the order of the firewall rules. Going into the project, I knew that the order matters when the traffic action is different (Allow, Drop, etc), but I did not think about the importance of the order of the rules for logging purposes. This was apparent when I was testing ping on the device, and the packets would hit the "ctstate RELATED,ESTABLISHED" rule instead of the ICMP rule. This, in turn, hurt the logging capability of the firewall, causing me to put the  "ctstate RELATED,ESTABLISHED" rule at the bottom of the input rule list.
 
 
 
 
-The program would start by accepting the user's input. The length of the hash determines what algorithm was used.
+## Testing Rules:
+As mentioned in the section above I found an issue with the order of my firewall rules which hurt the logging capability.
 
-![hashAlg_check.PNG](./hashAlg_check.PNG)
+The first screenshot shows that no packets hit the ICMP rule event after the device was pinged.
 
-
-
-
-Using the algorithm found in the previous step, we would access the respective updated password text file, comparing the user's input hash to the hashes in the file. If there was a match, then the program would tell the user and print out the corresponding password.
-
-![Check_dictionary.PNG](./Check_dictionary.PNG)
+![Ping Troubleshooting.PNG](./Ping_example_troubleshooting.PNG)
 
 
 
+After I moved the  "ctstate RELATED,ESTABLISHED" rule to the bottom of the list, we can see the logging working as intended.
 
-This part of the program would then prompt users to confirm whether they want to use the brute force function.
-
-![Run_bruteforce.PNG](./Run_bruteforce.PNG)
-
-
-
-
-The brute force function created a character set to run through using itertools. For usability, I set a maximum password length to 8.
-
-![bruteforce_sc](./bruteforce_sc.PNG)
+![Ping SC1.PNG](./ping_example_sc1.PNG)
+![Ping SC2.PNG](./ping_example_sc2.PNG)
 
 
 
+I also wanted to verify that the policy deny all was working for the INPUT chain. I did this by attempting to RDP into the host. After confirming that I was getting blocked, I created an allow rule to verify that it could work.
 
-## Future Improvements
-
-If I wanted to improve this project in the future, I would first consider adding a function that could handle salts. A second idea I could implement is adding mutations to my dictionary attack instead of just using bigger and bigger lists. This would also allow for a targeted attack against a specific user. The last thing I could do is improve the efficiency of the brute force option, either by using GPU acceleration or parallel processing.
-
+![RDP SC1.PNG](./RDP_example_sc1.PNG)
+![RDP SC2.PNG](./RDP_example_sc2.PNG)
 
 
 
@@ -84,14 +61,15 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination
 
+
 ###  Configuration for a home desktop: 
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere            
-ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
 ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
 ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
 DROP       all  --  anywhere             anywhere             ctstate INVALID
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
 
 Chain FORWARD (policy DROP)
 target     prot opt source               destination         
@@ -100,50 +78,9 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere   
 
-###  Configuration for a webserver:
-Chain INPUT (policy DROP)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere            
-ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
-ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
-DROP       all  --  anywhere             anywhere             ctstate INVALID
 
-Chain FORWARD (policy DROP)
-target     prot opt source               destination         
+###  Configuration for a web server:
 
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere   
-
-###  Configuration for a dns server:
-Chain INPUT (policy DROP)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere            
-ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
-ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
-DROP       all  --  anywhere             anywhere             ctstate INVALID
-
-Chain FORWARD (policy DROP)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere   
+###  Configuration for a DNS server:
 
 ###  Configuration for a mail server:
- Chain INPUT (policy DROP)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere            
-ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
-ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
-ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
-DROP       all  --  anywhere             anywhere             ctstate INVALID
-
-Chain FORWARD (policy DROP)
-target     prot opt source               destination         
-
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere     
