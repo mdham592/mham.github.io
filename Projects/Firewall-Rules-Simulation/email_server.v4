@@ -4,12 +4,12 @@
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [727:165715]
 -A INPUT -i lo -j ACCEPT
--A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 25 -m conntrack --ctstate NEW -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 587 -m conntrack --ctstate NEW -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 993 -m conntrack --ctstate NEW -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -j ACCEPT
 -A INPUT -m conntrack --ctstate INVALID -j DROP
+-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 -A OUTPUT -o lo -j ACCEPT
 COMMIT
 # Completed on Sat May 10 18:30:32 2025
