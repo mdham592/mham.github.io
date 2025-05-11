@@ -119,7 +119,7 @@ target     prot opt source               destination
 ACCEPT     all  --  anywhere             anywhere            
 
 
-###  Configuration for a mail server:
+<pre>###  Configuration for a mail server:
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere            
@@ -135,7 +135,7 @@ target     prot opt source               destination
 
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
-ACCEPT     all  --  anywhere             anywhere  
+ACCEPT     all  --  anywhere             anywhere  </pre>
 
 
 #TEST
