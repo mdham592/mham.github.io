@@ -102,7 +102,7 @@ ACCEPT     all  --  anywhere             anywhere
 </pre>
 
 ###  Configuration for a DNS server:
-<pre
+<pre>
 Chain INPUT (policy DROP)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere            
