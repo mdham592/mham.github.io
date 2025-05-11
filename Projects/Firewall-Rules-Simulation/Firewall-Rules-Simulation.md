@@ -136,3 +136,9 @@ target     prot opt source               destination
 Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 ACCEPT     all  --  anywhere             anywhere  
+
+
+#TEST
+
+
+<pre> ```bash # Configuration for a web server: Chain INPUT (policy DROP) target prot opt source destination ACCEPT all -- anywhere anywhere ACCEPT udp -- anywhere anywhere udp dpt:domain ctstate RELATED,ESTABLISHED ACCEPT tcp -- anywhere anywhere tcp dpt:domain ctstate RELATED,ESTABLISHED ACCEPT tcp -- anywhere anywhere tcp dpt:ssh ctstate RELATED,ESTABLISHED ACCEPT udp -- 192.168.86.0/24 anywhere udp dpt:domain ctstate NEW ACCEPT tcp -- 192.168.86.0/24 anywhere tcp dpt:domain ctstate NEW ACCEPT tcp -- anywhere anywhere tcp dpt:http ctstate NEW,ESTABLISHED ACCEPT tcp -- anywhere anywhere tcp dpt:https ctstate NEW,ESTABLISHED DROP all -- anywhere anywhere ctstate INVALID ACCEPT all -- anywhere anywhere ctstate RELATED,ESTABLISHED ``` </pre>
