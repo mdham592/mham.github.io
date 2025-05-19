@@ -1,1 +1,1 @@
-[Cyber Defenders Reveal Lab](./Disk-Reports/Cyber-Defenders-WriteUps/Reveal_Lab.md)
+[Cyber Defenders Reveal Lab](./Cyber-Defenders-WriteUps/Reveal_Lab.md)
