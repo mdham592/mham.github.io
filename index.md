@@ -20,7 +20,7 @@
 # Write Ups
 
  <!--*  <!-- [Malware Analysis](./Malware-Reports/reports.md). -->
-*   [Disk Forensics](./Disk-Reports/reports.md)
+*   [Forensics](./Disk-Reports/reports.md)
 
 
  <!--*  # Home Lab-->
