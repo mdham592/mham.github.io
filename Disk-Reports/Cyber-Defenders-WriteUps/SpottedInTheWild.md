@@ -31,26 +31,20 @@ After extracting the malicious .cmd file, it was run through dynamic analysis to
 ![suspicious_processes](./SpottedInTheWIld_Lab/powershell_activity.png)
 <br><br>
 
+The run.ps1 script was still on the host, so we pulled and decoded the file. The script's goal was to run reconnaissance and identify hosts online inside the network. 
 
-<table>
-  <tr>
-    <td><img src="./SpottedInTheWIld_Lab/dynamic_analysis_sc.png" alt="Image 1" width="550"/></td>
-    <td><img src="./SpottedInTheWIld_Lab/powershell_activity.png" alt="Image 2" width="500"/></td>
-  </tr>
-</table>
-
+<br><br>
 ![suspicious_processes](./SpottedInTheWIld_Lab/run_script_sc.png)
 <br><br>
 ![suspicious_processes](./SpottedInTheWIld_Lab/Decoded_run_script_sc.png)
 <br><br>
-<table>
-  <tr>
-    <td><img src="./SpottedInTheWIld_Lab/run_script_sc.png" alt="Image 1" width="550"/></td>
-    <td><img src="./SpottedInTheWIld_Lab/Decoded_run_script_sc.png" alt="Image 2" width="500"/></td>
-  </tr>
-</table>
 
+The results of the activity were saved to C:\Users\administartor\appdata\temp\BL4356.txt
+<br><br>
 ![suspicious_processes](./SpottedInTheWIld_Lab/stored_data.png)
+<br><br>
+
+A part of the PowerShell activity was the modification of event logs. It is unclear how exactly the modification was done, except that it was run by  "C:\Windows\Temp\Eventlog.ps1"
 <br><br>
 ![suspicious_processes](./SpottedInTheWIld_Lab/win_powershell_log.png)
 <br><br>
