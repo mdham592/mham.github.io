@@ -24,5 +24,5 @@
 
 
 # Home Lab
-*   <!-- [Home Lab Documentation](./Home-Lab/Lab-Documentation.md).-->
+ <!--*    [Home Lab Documentation](./Home-Lab/Lab-Documentation.md).-->
 
